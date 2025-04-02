@@ -1,0 +1,98 @@
+﻿INSERT INTO public.enterprise
+("Id", "Deleted", "Inactive", "Name", "Code")
+VALUES('38851f4e-02e2-4193-97ac-8eef6a9fb793'::uuid, false, false, 'OZYER', '');
+INSERT INTO public.company
+("Id", "Deleted", "Inactive", "Name", "EnterpriseId", "Code")
+VALUES('b5154254-c31d-4cb7-b548-7269c48d9d45'::uuid, false, false, 'Lykia', '38851f4e-02e2-4193-97ac-8eef6a9fb793'::uuid, '');
+INSERT INTO public.referance
+("Id", "Deleted", "Inactive", "Name", "CompanyId", "Code")
+VALUES('577de21a-476f-46b6-9981-a014bad21640'::uuid, false, false, 'Adult', 'b5154254-c31d-4cb7-b548-7269c48d9d45'::uuid, '');
+INSERT INTO public.referance
+("Id", "Deleted", "Inactive", "Name", "CompanyId", "Code")
+VALUES('4b23d002-7de4-4674-b3ca-4af96ddab04b'::uuid, false, false, 'Lykia', 'b5154254-c31d-4cb7-b548-7269c48d9d45'::uuid, '');
+INSERT INTO public.agency
+("Id", "Deleted", "Inactive", "EnterpriseId", "CompanyId", "ReferanceId", "Code", "Name")
+VALUES('4dd9263c-60dc-45bc-ab65-c9b6e4d294b9'::uuid, false, false, '38851f4e-02e2-4193-97ac-8eef6a9fb793'::uuid, 'b5154254-c31d-4cb7-b548-7269c48d9d45'::uuid, '4b23d002-7de4-4674-b3ca-4af96ddab04b'::uuid, '01', 'ETS');
+INSERT INTO public.agency
+("Id", "Deleted", "Inactive", "EnterpriseId", "CompanyId", "ReferanceId", "Code", "Name")
+VALUES('893ef384-4ecb-4f31-ac87-66e2f544fe04'::uuid, false, false, '38851f4e-02e2-4193-97ac-8eef6a9fb793'::uuid, 'b5154254-c31d-4cb7-b548-7269c48d9d45'::uuid, '4b23d002-7de4-4674-b3ca-4af96ddab04b'::uuid, '02', 'Coral Travel');
+INSERT INTO public.agency
+("Id", "Deleted", "Inactive", "EnterpriseId", "CompanyId", "ReferanceId", "Code", "Name")
+VALUES('bc26e260-c04e-40cc-a1d0-16df08109578'::uuid, true, false, '38851f4e-02e2-4193-97ac-8eef6a9fb793'::uuid, 'b5154254-c31d-4cb7-b548-7269c48d9d45'::uuid, '4b23d002-7de4-4674-b3ca-4af96ddab04b'::uuid, '03', 'Tatilbudur');
+INSERT INTO public.roomlocation
+("Id", "Deleted", "Inactive", "EnterpriseId", "CompanyId", "ReferanceId", "Code", "Name")
+VALUES('d31a8b67-5cb3-409f-955d-367d36feebcf'::uuid, false, false, '38851f4e-02e2-4193-97ac-8eef6a9fb793'::uuid, 'b5154254-c31d-4cb7-b548-7269c48d9d45'::uuid, '577de21a-476f-46b6-9981-a014bad21640'::uuid, 'KARA', 'KARA');
+INSERT INTO public.pricelocation
+("Id", "Deleted", "Inactive", "EnterpriseId", "CompanyId", "ReferanceId", "Code", "Name")
+VALUES('c7222d8d-8d2e-4596-8a5c-135c8f621480'::uuid, false, false, '38851f4e-02e2-4193-97ac-8eef6a9fb793'::uuid, 'b5154254-c31d-4cb7-b548-7269c48d9d45'::uuid, '577de21a-476f-46b6-9981-a014bad21640'::uuid, 'KARA', 'KARA');
+INSERT INTO public.bank
+("Id", "Deleted", "Inactive", "EnterpriseId", "CompanyId", "ReferanceId", "Code", "Name")
+VALUES('1c92e00a-9717-43d5-95cf-572e486a1384'::uuid, false, false, '38851f4e-02e2-4193-97ac-8eef6a9fb793'::uuid, 'b5154254-c31d-4cb7-b548-7269c48d9d45'::uuid, '577de21a-476f-46b6-9981-a014bad21640'::uuid, 'MB', 'MB');
+INSERT INTO public.currency
+("Id", "BankId", "Deleted", "Inactive", "EnterpriseId", "CompanyId", "ReferanceId", "Code", "Name")
+VALUES('50fc486e-b4e0-4722-84b8-b607b04e5435'::uuid, '1c92e00a-9717-43d5-95cf-572e486a1384'::uuid, false, false, '38851f4e-02e2-4193-97ac-8eef6a9fb793'::uuid, 'b5154254-c31d-4cb7-b548-7269c48d9d45'::uuid, '577de21a-476f-46b6-9981-a014bad21640'::uuid, 'TL', 'TL');
+INSERT INTO public.boardinghouse
+("Id", "Deleted", "Inactive", "EnterpriseId", "CompanyId", "ReferanceId", "Code", "Name")
+VALUES('78565ec2-19d4-4a8a-95df-3579f8234b68'::uuid, false, false, '38851f4e-02e2-4193-97ac-8eef6a9fb793'::uuid, 'b5154254-c31d-4cb7-b548-7269c48d9d45'::uuid, '577de21a-476f-46b6-9981-a014bad21640'::uuid, 'UAL', 'UAL');
+INSERT INTO public.market
+("Id", "Deleted", "Inactive", "EnterpriseId", "CompanyId", "ReferanceId", "Code", "Name")
+VALUES('b80a1755-f744-4a4c-bdc0-80daf1951e11'::uuid, false, false, '38851f4e-02e2-4193-97ac-8eef6a9fb793'::uuid, 'b5154254-c31d-4cb7-b548-7269c48d9d45'::uuid, '577de21a-476f-46b6-9981-a014bad21640'::uuid, 'IC', 'IC PAZAR');
+INSERT INTO public.tax
+("Id", "Deleted", "Inactive", "EnterpriseId", "CompanyId", "ReferanceId", "Code", "Name", "Rate")
+VALUES('a8e59efd-3c0a-4715-974d-11622432636d'::uuid, false, false, '38851f4e-02e2-4193-97ac-8eef6a9fb793'::uuid, 'b5154254-c31d-4cb7-b548-7269c48d9d45'::uuid, NULL, 'KV %2', 'KV %2', 0.02);
+INSERT INTO public.tax
+("Id", "Deleted", "Inactive", "EnterpriseId", "CompanyId", "ReferanceId", "Code", "Name", "Rate")
+VALUES('b744c250-69e0-4c6d-aa22-7282ef848b6a'::uuid, false, false, '38851f4e-02e2-4193-97ac-8eef6a9fb793'::uuid, 'b5154254-c31d-4cb7-b548-7269c48d9d45'::uuid, NULL, 'Room %%10', 'Room %%10', 0.1);
+INSERT INTO public.taxsequence
+("Id", "TaxId", "PrecedingTax", "Deleted", "Inactive", "Order")
+VALUES('f07e4563-7faf-4fb0-80f3-378716249f20'::uuid, 'a8e59efd-3c0a-4715-974d-11622432636d'::uuid, 'b744c250-69e0-4c6d-aa22-7282ef848b6a'::uuid, false, false, 1);
+INSERT INTO public.department
+("Id", "TaxId", "Type", "Deleted", "Inactive", "EnterpriseId", "CompanyId", "ReferanceId", "Code", "Name")
+VALUES('5a59cf7f-e17a-4d3a-a55f-6efeee26b4a9'::uuid, 'b744c250-69e0-4c6d-aa22-7282ef848b6a'::uuid, 0, false, false, '38851f4e-02e2-4193-97ac-8eef6a9fb793'::uuid, 'b5154254-c31d-4cb7-b548-7269c48d9d45'::uuid, NULL, 'Room Rate', 'Room Rate');
+INSERT INTO public.companydepartmentperiod
+("Id", "StartDate", "EndDate", "CompanyId", "DepartmentId", "TaxId", "Deleted", "Inactive")
+VALUES('b819a1a5-2fd5-4ab1-853b-f9da1e322b97'::uuid, '2024-01-01 00:00:00.000', '2024-01-01 00:00:00.000', 'b5154254-c31d-4cb7-b548-7269c48d9d45'::uuid, '5a59cf7f-e17a-4d3a-a55f-6efeee26b4a9'::uuid, 'b744c250-69e0-4c6d-aa22-7282ef848b6a'::uuid, false, false);
+
+INSERT INTO public.companydefaultdepartments
+("Id", "CompanyId", "DepartmentId", "Type", "StartDate", "EndDate", "Deleted", "Inactive")
+VALUES('01fdffc5-e2e1-449f-9e10-df4409b2a315'::uuid, 'b5154254-c31d-4cb7-b548-7269c48d9d45'::uuid, '5a59cf7f-e17a-4d3a-a55f-6efeee26b4a9'::uuid, 0, '2023-01-01 00:00:00.000', '2050-01-01 00:00:00.000', false, false);
+
+
+
+ CREATE SEQUENCE public.folio_no_seq
+START 1000000
+MINVALUE 1000000
+INCREMENT 1
+CACHE 1;
+
+CREATE OR REPLACE FUNCTION public.set_folio_no()
+RETURNS TRIGGER AS $$
+BEGIN
+    NEW."No" := nextval('public.folio_no_seq');
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trg_set_folio_no
+BEFORE INSERT ON public.folio
+FOR EACH ROW
+EXECUTE FUNCTION public.set_folio_no();
+
+CREATE SEQUENCE public.reservationdetail_no_seq
+START 1000000
+MINVALUE 1000000
+INCREMENT 1
+CACHE 1;
+
+CREATE OR REPLACE FUNCTION public.set_reservation_no()
+RETURNS TRIGGER AS $$
+BEGIN
+    NEW."ReservationNo" := nextval('public.reservationdetail_no_seq')::text;
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trg_set_reservation_no
+BEFORE INSERT ON public.reservationdetail
+FOR EACH ROW
+EXECUTE FUNCTION public.set_reservation_no();
